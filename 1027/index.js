@@ -6,21 +6,6 @@ app.use(express.urlencoded({extended: true}));  // body-parser: 바디에 담은
 app.use(express.json())  // body-parser
 const port = 3000;
 
-// post => { title, description, isDeleted }
-// const postsArray = [
-//     {
-//         id: 1,
-//         title: "post1",
-//         description: "post1 description",
-//         isDeleted: false,
-//     }, {
-//         id: 2,
-//         title: "post2",
-//         description: "post2 description",
-//         isDeleted: false,
-//     }
-// ];
-
 const postsFilePath = "/Users/soohyun-choi/Desktop/dev/SNU_webProgramming/1027/post.json";
 const posts = JSON.parse(fs.readFileSync(postsFilePath, "utf-8"));
 console.log(posts);
